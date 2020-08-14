@@ -22,8 +22,8 @@ continue will restart the loop without execution the code after the continue sta
 # While Loop   22
 # For Loop   32
 # For Loop   57
-# 
-#
+# Break   85
+#Contin   104
 # 
 # 
 # While Loop
@@ -101,7 +101,13 @@ continue will restart the loop without execution the code after the continue sta
 
 
 
-# Break  1
+#  Continue
+def print_list(mylist):
+    for element in mylist:
+        if element == 4:  # it skips the number 4 in the list when printing the list  ** se below
+            continue
+        print(element)
+ 
 def sum_list(mylist):
     list_sum = 0
     for number in mylist:
@@ -110,10 +116,11 @@ def sum_list(mylist):
 
 def list_contains(mylist, element):
     for el in mylist:
-        if el == element:  # 3 
-            print("Yes")  # Yes
+        if el == element:
+            print("Yes")
             break
 
-print(sum_list((5,6,7,8)))  # 26
-
-list_contains([2,4,6,8,2], 2) 
+print_list([2,4,6,8])  # 2
+                        # 6
+                        # 8
+                        
