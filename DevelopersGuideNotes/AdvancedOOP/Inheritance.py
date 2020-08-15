@@ -3,7 +3,7 @@ Ineritance is a way for classes to' acquire'                Class Honda(car):
 attributes and methods from other classes.
                                                                 model = 'Honda Civic'
 
-I cna 'inherit' from anouther class by including            newcar = Car()
+I can 'inherit' from anouther class by including            newcar = Car()
 it in the parenthesis in your class defination.
                                                             newcar.drive()
 
@@ -32,13 +32,7 @@ to the parent class, and then call it's method.                 def drive(self):
                                                                     print("Driving MY Honda")
 
 """
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+
 
 class Car:
     def __init__(self):
@@ -57,14 +51,18 @@ class Car:
             print("Driving the Car!")
         else:
             print("I need to start the engine first!")
-            
 
-class HondaCivic(Car):
-    model = 'Honda Civic'
+class BlueCar:
     color = 'Blue'
+
+class Honda(Car, BlueCar):
+    model = 'Honda'
     
     def start_engine(self):
         super().start_engine()
-        print("Honda! Start Engine")
-        self.engine = True
+        print("Honda! Start engine")
+
+class HondaCivic(Honda):
+    model = 'Honda Civic'
+ 
     
