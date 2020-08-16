@@ -1,1 +1,1 @@
-numbers_file = open('numbers.list', 'r')
+numbers_file = open('numbers.txt', 'r')
