@@ -1,0 +1,1 @@
+numbers_file = open('numbers.list', 'r')
