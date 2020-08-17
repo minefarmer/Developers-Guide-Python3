@@ -16,6 +16,13 @@ num_2 = input("Please enter a second number: ")
 
 operator = input("Select an operation to perform: [add, subtract, multiply, divide]")
 results_list = open('result_list', 'r').read().splitlines()
+
+try:
+    num_1 = int(num_1)
+    num_2 = int(num_2)
+except ValueError:
+    print("You have intered an invalid number")
+    
 if operator =='add':
     result = add(num_1, num_2)
     
